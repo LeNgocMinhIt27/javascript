@@ -6,4 +6,4 @@ text += " World";
 document.getElementById("demo1").innerHTML = text;
 let y = 10;
 y -= 5;
-document.getElementById("demo2").innerHTML = "Value of x is: " + x;
+document.getElementById("demo2").innerHTML = "Value of x is: " + y;
