@@ -1,0 +1,9 @@
+let x = 10;
+x += 5;
+document.getElementById("demo").innerHTML = "Value of x is: " + x;
+let text = "Hello";
+text += " World";
+document.getElementById("demo1").innerHTML = text;
+let y = 10;
+y -= 5;
+document.getElementById("demo2").innerHTML = "Value of x is: " + x;
