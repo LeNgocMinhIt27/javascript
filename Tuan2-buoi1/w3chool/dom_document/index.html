@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>
+      The HTML DOM document object is the owner of all other objects in your web
+      page.
+    </h2>
+    <h2>The HTML DOM Document Object</h2>
+    <p>
+      The document object represents your web page. If you want to access any
+      element in an HTML page, you always start with accessing the document
+      object. Below are some examples of how you can use the document object to
+      access and manipulate HTML.
+    </p>
+    <ul>
+      <li>
+        Finding HTML Elements
+        <ul>
+          <li>document.getElementById(id)</li>
+          <li>document.getElementsByTagName(name)</li>
+          <li>document.getElementsByClassName(name)</li>
+        </ul>
+      </li>
+      <li>
+        Changing HTML Elements
+        <ul>
+          <li>element.innerHTML = new html content</li>
+          <li>element.attribute = new value</li>
+          <li>element.style.property = new style</li>
+          <li>element.setAttribute(attribute, value)</li>
+        </ul>
+      </li>
+      <li>
+        Adding and Deleting Elements
+        <ul>
+          <li>document.createElement(element)</li>
+          <li>document.removeChild(element)</li>
+          <li>document.appendChild(element)</li>
+          <li>document.replaceChild(new, old)</li>
+          <li>document.write(text)</li>
+        </ul>
+      </li>
+      <li>
+        Adding Events Handlers
+        <ul>
+          <li>document.getElementById(id).onclick = function(){code}</li>
+        </ul>
+      </li>
+      <li>
+        Finding HTML Objects
+        <ul>
+          <li>document.anchors</li>
+          <li>document.applets</li>
+          <li>document.baseURI</li>
+          <li>document.body</li>
+          <li>document.cookie</li>
+          <li>...</li>
+        </ul>
+      </li>
+    </ul>
+    <script src="./main.js"></script>
+  </body>
+</html>
