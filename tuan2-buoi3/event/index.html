@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event</title>
+  </head>
+  <body>
+    <p>
+      A JavaScript can be executed when an event occurs, like when a user clicks
+      on an HTML element.
+    </p>
+    <ul>
+      <li>When a user clicks the mouse</li>
+      <li>When a web page has loaded</li>
+      <li>When an image has been loaded</li>
+      <li>When the mouse moves over an element</li>
+      <li>When an input field is changed</li>
+      <li>When an HTML form is submitted</li>
+      <li>When a user strokes a key</li>
+    </ul>
+    <h2>JavaScript HTML Events</h2>
+    <h2>JavaScript HTML Events</h2>
+    <h2 onclick="changeText(this)">Click on this text!</h2>
+    <h2 onclick="this.innerHTML='Ooops!'">Click on this text!</h2>
+    <p>
+      The onload and onunload events are triggered when the user enters or
+      leaves the page.
+    </p>
+    <div
+      onmouseover="mOver(this)"
+      onmouseout="mOut(this)"
+      style="
+        background-color: #d94a38;
+        width: 120px;
+        height: 20px;
+        padding: 40px;
+      "
+    >
+      Mouse Over Me
+    </div>
+
+    <div
+      onmousedown="mDown(this)"
+      onmouseup="mUp(this)"
+      style="
+        background-color: #d94a38;
+        width: 90px;
+        height: 20px;
+        padding: 40px;
+      "
+    >
+      Click Me
+    </div>
+    <script src="./main.js"></script>
+  </body>
+</html>
