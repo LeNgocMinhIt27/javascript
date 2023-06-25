@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>JavaScript Functions</h1>
+    <h2>The Arrow Function</h2>
+
+    <p>
+      This example shows the syntax of an Arrow Function, and how to use it.
+    </p>
+
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p>
+      This example demonstrate that in Arrow Functions, the "this" keyword
+      represents the object that owns the function, no matter who calls the
+      function.
+    </p>
+
+    <p>
+      Click the button to execute the "hello" function again, and you will see
+      that "this" still represents the window object.
+    </p>
+
+    <button id="btn">Click Me!</button>
+
+    <p id="demo4"></p>
+
+    <script>
+      let myFunction = (a, b) => a * b
+      document.getElementById('demo').innerHTML = myFunction(4, 5)
+      let hello = ''
+
+      hello = function () {
+        return 'Hello World!'
+      }
+
+      document.getElementById('demo1').innerHTML = hello()
+      let hello1 = ''
+
+      hello1 = () => {
+        return 'Hello World!'
+      }
+
+      document.getElementById('demo2').innerHTML = hello1()
+      let hello2 = ''
+
+      hello2 = val => 'Hello ' + val
+
+      document.getElementById('demo3').innerHTML = hello2('Universe!')
+      let hello3 = ''
+
+      hello3 = () => {
+        document.getElementById('demo4').innerHTML += this
+      }
+
+      //The window object calls the function:
+      window.addEventListener('load', hello3)
+
+      //A button object calls the function:
+      document.getElementById('btn').addEventListener('click', hello3)
+    </script>
+  </body>
+</html>

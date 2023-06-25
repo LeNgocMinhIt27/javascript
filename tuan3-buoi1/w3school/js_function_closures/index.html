@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>
+      JavaScript variables can belong to the local or global scope. Global
+      variables can be made local (private) with closures.
+    </p>
+    <h2>JavaScript Function Closures</h2>
+    <p>Counting with a global variable.</p>
+
+    <p id="demo"></p>
+    <p id="demo1"></p>
+
+    <script>
+      let counter = 0
+
+      function add() {
+        counter += 1
+      }
+
+      // Call add() 3 times
+      add()
+      add()
+      add()
+
+      // The counter should now be 3
+      document.getElementById('demo').innerHTML = 'The counter is: ' + counter
+      // Initiate counter
+      let counter1 = 0
+
+      // Function to increment counter
+      function add1() {
+        let counter1 = 0
+        counter1 += 1
+      }
+
+      // Call add() 3 times
+      add1()
+      add1()
+      add1()
+
+      // The result is not 3 because you mix up the globaland local counter
+      document.getElementById('demo1').innerHTML = 'The counter is: ' + counter1
+    </script>
+  </body>
+</html>

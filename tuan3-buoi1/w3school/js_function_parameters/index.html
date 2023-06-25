@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>
+      A JavaScript function does not perform any checking on parameter values
+      (arguments).
+    </p>
+    <p>
+      If a function is called with missing arguments (less than declared), the
+      missing values are set to undefined. Sometimes this is acceptable, but
+      sometimes it is better to assign a default value to the parameter:
+    </p>
+    <p>Setting a default value to a function parameter.</p>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+
+    <script>
+      function myFunction(x, y) {
+        if (y === undefined) {
+          y = 2
+        }
+        return x * y
+      }
+      document.getElementById('demo').innerHTML = myFunction(4)
+      function sum(...args) {
+        let sum = 0
+        for (let arg of args) sum += arg
+        return sum
+      }
+
+      let x = sum(4, 9, 16, 25, 29, 100, 66, 77)
+
+      document.getElementById('demo1').innerHTML = x
+      function findMax() {
+        let max = -Infinity
+        for (let i = 0; i < arguments.length; i++) {
+          if (arguments[i] > max) {
+            max = arguments[i]
+          }
+        }
+        return max
+      }
+      document.getElementById('demo2').innerHTML = findMax(4, 5, 6)
+      function sumAll() {
+        let sum = 0
+        for (let i = 0; i < arguments.length; i++) {
+          sum += arguments[i]
+        }
+        return sum
+      }
+      document.getElementById('demo3').innerHTML = sumAll(
+        1,
+        123,
+        500,
+        115,
+        44,
+        88
+      )
+    </script>
+  </body>
+</html>

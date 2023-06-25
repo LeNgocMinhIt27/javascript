@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>
+      The code inside a JavaScript function will execute when "something"
+      invokes it.
+    </p>
+    <p>
+      The code inside a function is not executed when the function is defined.
+    </p>
+    <p>The code inside a function is executed when the function is invoked.</p>
+    <p>
+      It is common to use the term "call a function" instead of "invoke a
+      function".
+    </p>
+    <p>
+      It is also common to say "call upon a function", "start a function", or
+      "execute a function". In this tutorial, we will use invoke, because a
+      JavaScript function can be invoked without being called.
+    </p>
+
+    <h2>JavaScript Functions</h2>
+
+    <p>
+      In HTML the value of <b>this</b>, in a global function, is the window
+      object.
+    </p>
+
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+
+    <script>
+      let x = myFunction()
+      function myFunction() {
+        return this
+      }
+      document.getElementById('demo').innerHTML = x
+      const myObject = {
+        firstName: 'John',
+        lastName: 'Doe',
+        fullName: function () {
+          return this.firstName + ' ' + this.lastName
+        }
+      }
+      document.getElementById('demo1').innerHTML = myObject.fullName()
+      const myObject1 = {
+        firstName: 'John',
+        lastName: 'Doe',
+        fullName: function () {
+          return this
+        }
+      }
+      document.getElementById('demo2').innerHTML = myObject1.fullName()
+    </script>
+  </body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>
+      With the apply() method, you can write a method that can be used on
+      different objects.
+    </p>
+    <h2>JavaScript Functions</h2>
+    <p>
+      In this example the fulllName method of person is <b>applied</b> on
+      person1:
+    </p>
+
+    <p id="demo"></p>
+    <p id="demo1"></p>
+
+    <script>
+      const person = {
+        fullName: function (city, country) {
+          return (
+            this.firstName + ' ' + this.lastName + ',' + city + ',' + country
+          )
+        }
+      }
+
+      const person1 = {
+        firstName: 'John',
+        lastName: 'Doe'
+      }
+
+      document.getElementById('demo').innerHTML = person.fullName.apply(
+        person1,
+        ['Oslo', 'Norway']
+      )
+
+      const person2 = {
+        fullName: function (city, country) {
+          return (
+            this.firstName + ' ' + this.lastName + ',' + city + ',' + country
+          )
+        }
+      }
+
+      const person3 = {
+        firstName: 'John',
+        lastName: 'Doe'
+      }
+
+      const person4 = {
+        firstName: 'Mary',
+        lastName: 'Doe'
+      }
+
+      document.getElementById('demo1').innerHTML = person2.fullName.call(
+        person3,
+        'Oslo',
+        'Norway'
+      )
+    </script>
+  </body>
+</html>
