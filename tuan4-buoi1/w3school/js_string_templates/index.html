@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul>
+      <li>Template Literals</li>
+      <li>Template Strings</li>
+      <li>String Templates</li>
+      <li>Back-Tics Syntax</li>
+    </ul>
+    <h2>JavaScript Template Literals</h2>
+
+    <p>Template literals use back-ticks (``) to define a string:</p>
+
+    <p id="demo"></p>
+
+    <p>Template literals are not supported in Internet Explorer.</p>
+
+    <script>
+      let text = `Hello world!`
+      document.getElementById('demo').innerHTML = text
+      let text1 = `He's often called "Johnny"`
+      document.getElementById('demo').innerHTML = text1
+      let text2 = `The quick
+brown fox
+jumps over
+the lazy dog`
+
+      document.getElementById('demo').innerHTML = text2
+    </script>
+  </body>
+</html>

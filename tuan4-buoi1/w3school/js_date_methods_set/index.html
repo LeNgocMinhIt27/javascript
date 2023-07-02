@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>
+      Set Date methods let you set date values (years, months, days, hours,
+      minutes, seconds, milliseconds) for a Date Object.
+    </p>
+    <p>setDate()</p>
+    <p>setFullYear()</p>
+    <p>setHours()</p>
+    <p>setMilliseconds()</p>
+    <p>setMinutes()</p>
+    <p>setMonth()</p>
+    <p>setSeconds()</p>
+    <p>setTime()</p>
+    <h2>JavaScript setFullYear()</h2>
+    <p>The setFullYear() method can optionally set month and day.</p>
+    <p>Please note that month counts from 0. December is month 11:</p>
+
+    <p id="demo"></p>
+
+    <script>
+      const d = new Date()
+      d.setFullYear(2020, 11, 3)
+      document.getElementById('demo').innerHTML = d
+      const d1 = new Date()
+      d1.setMonth(11)
+      document.getElementById('demo').innerHTML = d1
+      const d2 = new Date()
+      d2.setDate(15)
+      document.getElementById('demo').innerHTML = d2
+      const d3 = new Date()
+      d3.setDate(d3.getDate() + 50)
+      document.getElementById('demo').innerHTML = d3
+    </script>
+  </body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>toString()</p>
+    <p>toExponential()</p>
+    <p>toFixed()</p>
+    <p>toPrecision()</p>
+    <p>ValueOf()</p>
+    <h2>JavaScript Number Methods</h2>
+
+    <p>The toString() method converts a number to a string.</p>
+
+    <p id="demo"></p>
+
+    <script>
+      let x = 123
+      document.getElementById('demo').innerHTML =
+        x.toString() +
+        '<br>' +
+        (123).toString() +
+        '<br>' +
+        (100 + 23).toString()
+      let y = 9.656
+      document.getElementById('demo').innerHTML =
+        y.toExponential() +
+        '<br>' +
+        y.toExponential(2) +
+        '<br>' +
+        y.toExponential(4) +
+        '<br>' +
+        y.toExponential(6)
+      let z = 9.656
+      document.getElementById('demo').innerHTML =
+        z.toFixed(0) +
+        '<br>' +
+        z.toFixed(2) +
+        '<br>' +
+        z.toFixed(4) +
+        '<br>' +
+        z.toFixed(6)
+      let w = 9.656
+      document.getElementById('demo').innerHTML =
+        w.toPrecision() +
+        '<br>' +
+        w.toPrecision(2) +
+        '<br>' +
+        w.toPrecision(4) +
+        '<br>' +
+        w.toPrecision(6)
+      let t = 123
+
+      document.getElementById('demo').innerHTML =
+        t.valueOf() + '<br>' + (123).valueOf() + '<br>' + (100 + 23).valueOf()
+    </script>
+  </body>
+</html>

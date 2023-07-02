@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>
+      Date objects are created with the new Date() constructor. There are 9 ways
+      to create a new date object:
+    </p>
+    <p>new Date()</p>
+    <p>new Date(date string)</p>
+    <p>new Date(year,month)</p>
+    <p>new Date(year,month,day)</p>
+    <p>new Date(year,month,day,hours)</p>
+    <p>new Date(year,month,day,hours,minutes)</p>
+    <p>new Date(year,month,day,hours,minutes,seconds)</p>
+    <p>new Date(year,month,day,hours,minutes,seconds,ms)</p>
+    <p>new Date(milliseconds)</p>
+    <h1>JavaScript Dates</h1>
+    <h2>Using new Date()</h2>
+
+    <p>A date object can be created with a specified date and time:</p>
+    <p id="demo"></p>
+
+    <script>
+      const d = new Date('October 13, 2014 11:13:00')
+      document.getElementById('demo').innerHTML = d
+    </script>
+  </body>
+</html>

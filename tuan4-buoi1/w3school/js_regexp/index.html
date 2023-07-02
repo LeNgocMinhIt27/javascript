@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>
+      A regular expression is a sequence of characters that forms a search
+      pattern. The search pattern can be used for text search and text replace
+      operations.
+    </p>
+    <h1>Using String search() With a Regular</h1>
+    <h2>JavaScript Regular Expressions</h2>
+
+    <p>
+      Search a string for "w3Schools", and display the position of the match:
+    </p>
+
+    <p id="demo"></p>
+
+    <script>
+      let text = 'Visit W3Schools!'
+      let n = text.search(/w3Schools/i)
+      document.getElementById('demo').innerHTML = n
+      function myFunction() {
+        let text = document.getElementById('demo').innerHTML
+        document.getElementById('demo').innerHTML = text.replace(
+          /microsoft/i,
+          'W3Schools'
+        )
+      }
+      const obj = /e/.exec('The best things in life are free!')
+      document.getElementById('demo').innerHTML =
+        'Found ' +
+        obj[0] +
+        ' in position ' +
+        obj.index +
+        ' in the text: ' +
+        obj.input
+    </script>
+  </body>
+</html>

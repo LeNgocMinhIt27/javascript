@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>
+      JavaScript BigInt variables are used to store big integer values that are
+      too big to be represented by a normal JavaScript Number.
+    </p>
+    <p id="demo"></p>
+
+    <script>
+      let x = 123456789012345678901234567890n
+      let y = BigInt('123456789012345678901234567890')
+      document.getElementById('demo').innerHTML = x + '<br>' + y
+    </script>
+  </body>
+</html>

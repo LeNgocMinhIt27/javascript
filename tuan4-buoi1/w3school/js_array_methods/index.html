@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>Array length</p>
+    <p>Array toString()</p>
+    <p>Array pop()</p>
+    <p>Array push()</p>
+    <p>Array shift()</p>
+    <p>Array unshift()</p>
+    <p>Array join()</p>
+    <p>Array delete()</p>
+    <p>Array concat()</p>
+    <p>Array flat()</p>
+    <p>Array splice()</p>
+    <p>Array slice()</p>
+    <script>
+      const fruits = ['Banana', 'Orange', 'Apple', 'Mango']
+      let size = fruits.length
+      document.getElementById('demo').innerHTML = size
+      const fruits1 = ['Banana', 'Orange', 'Apple', 'Mango']
+      document.getElementById('demo').innerHTML = fruits.toString()
+      const fruits2 = ['Banana', 'Orange', 'Apple', 'Mango']
+      document.getElementById('demo').innerHTML = fruits.join(' * ')
+      const fruits3 = ['Banana', 'Orange', 'Apple', 'Mango']
+      document.getElementById('demo1').innerHTML = fruits
+      fruits.pop()
+      document.getElementById('demo2').innerHTML = fruits
+      const fruit4 = ['Banana', 'Orange', 'Apple', 'Mango']
+      document.getElementById('demo1').innerHTML = fruits
+      fruits.push('Kiwi')
+      document.getElementById('demo2').innerHTML = fruits
+    </script>
+  </body>
+</html>

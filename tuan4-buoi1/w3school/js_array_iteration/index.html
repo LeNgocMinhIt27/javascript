@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>Array iteration methods operate on every array item.</p>
+    <h1>JavaScript Arrays</h1>
+    <h2>The forEach() Method</h2>
+
+    <p>Call a function once for each array element:</p>
+    <h1>JavaScript Array forEach()</h1>
+    <h1>JavaScript Array map()</h1>
+    <h1>JavaScript Array flatMap()</h1>
+    <h1>JavaScript Array filter()</h1>
+    <h1>JavaScript Array reduce()</h1>
+    <h1>JavaScript Array reduceRight()</h1>
+    <h1>JavaScript Array every()</h1>
+    <h1>JavaScript Array some()</h1>
+    <h1>JavaScript Array indexOf()</h1>
+    <h1>JavaScript Array lastIndexOf()</h1>
+    <h1>JavaScript Array find()</h1>
+    <h1>JavaScript Array findIndex()</h1>
+    <h1>JavaScript Array.from()</h1>
+    <h1>JavaScript Array Keys()</h1>
+    <h1>JavaScript Array entries()</h1>
+    <h1>JavaScript Array includes()</h1>
+    <h1>JavaScript Array Spread (...)</h1>
+
+    <p id="demo"></p>
+
+    <script>
+      const numbers = [45, 4, 9, 16, 25]
+
+      let txt = ''
+      numbers.forEach(myFunction)
+      document.getElementById('demo').innerHTML = txt
+
+      function myFunction(value, index, array) {
+        txt += value + '<br>'
+      }
+      const numbers1 = [45, 4, 9, 16, 25]
+      const numbers2 = numbers1.map(myFunction)
+
+      document.getElementById('demo').innerHTML = numbers2
+
+      function myFunction(value, index, array) {
+        return value * 2
+      }
+      const myArr = [1, 2, 3, 4, 5, 6]
+      const newArr = myArr.flatMap(x => x * 2)
+      document.getElementById('demo').innerHTML = newArr
+      const number = [45, 4, 9, 16, 25]
+      const over18 = number.filter(myFunction)
+
+      document.getElementById('demo').innerHTML = over18
+
+      function myFunction(value, index, array) {
+        return value > 18
+      }
+      const numberss = [45, 4, 9, 16, 25]
+      let sum = numberss.reduce(myFunction)
+
+      document.getElementById('demo').innerHTML = 'The sum is ' + sum
+
+      function myFunction(total, value, index, array) {
+        return total + value
+      }
+    </script>
+  </body>
+</html>
