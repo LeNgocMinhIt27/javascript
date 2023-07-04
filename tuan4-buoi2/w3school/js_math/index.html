@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>
+      JavaScript provides 8 mathematical constants that can be accessed as Math
+      properties:
+    </h1>
+    <p>Math.E</p>
+    <p>Math.PI</p>
+    <p>Math.SQRT2</p>
+    <p>Math.SQRT1_2</p>
+    <p>Math.LN2</p>
+    <p>...</p>
+    <h1>There are 4 common methods to round a number to an integer:</h1>
+    <p>Math.round(x)</p>
+    <p>Math.ceil(x)</p>
+    <p>Math.floor(x)</p>
+    <p>Math.trunc(x)</p>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <script>
+      document.getElementById('demo').innerHTML = Math.round(4.6)
+      document.getElementById('demo1').innerHTML = Math.ceil(4.4)
+      document.getElementById('demo2').innerHTML = Math.floor(4.7)
+      document.getElementById('demo3').innerHTML = Math.trunc(4.7)
+      document.getElementById('demo4').innerHTML = Math.sign(4)
+    </script>
+  </body>
+</html>
