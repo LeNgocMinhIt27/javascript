@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <p>
+            A callback is a function passed as an argument to another function
+
+            This technique allows a function to call another function
+            
+            A callback function can run after another function has finished
+        </p>
+        <p id="demo"></p>
+        <script>
+            function myDisplayer(some){
+                document.getElementById('demo').innerHTML = some;
+            }
+            function myCalculator(num1,num2){
+                let sum = num1+num2;
+                myDisplayer(sum);
+            }
+          myCalculator(5,5);
+        </script>
+    </body>
+</html>
