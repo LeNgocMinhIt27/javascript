@@ -40,3 +40,43 @@ const fetchFileContents = async () => {
 fetchFileContents().then((data) => {
   text.innerHTML = data;
 });
+//exercise 3
+const fetchData = async () => {
+  try {
+    const apiResponse = fetch("https://jsonplaceholder.typicode.com/todos/");
+    const fileResponse = fetch(
+      "https://raw.githubusercontent.com/openai/gym/master/README.md"
+    );
+    const additionalApiResponse = fetch("https://api.github.com/users/bard");
+
+    const [apiDataResponse, fileResponseText, additionalApiDataResponse] =
+      await Promise.all([apiResponse, fileResponse, additionalApiResponse]);
+
+    if (
+      apiDataResponse.status === 200 &&
+      additionalApiDataResponse.status === 200
+    ) {
+      const apiData = await apiDataResponse.json();
+      const additionalApiData = await additionalApiDataResponse.json();
+      const fileContents = await fileResponseText.text();
+
+      // Xử lý dữ liệu thu được ở đây
+      console.log("API Data:", apiData);
+      console.log("File Contents:", fileContents);
+      console.log("Additional API Data:", additionalApiData);
+
+      return {
+        apiData,
+        fileContents,
+        additionalApiData,
+      };
+    } else {
+      throw new Error("Something went wrong with the HTTP requests.");
+    }
+  } catch (error) {
+    console.log("Error:", error);
+    throw error;
+  }
+};
+
+fetchData();
