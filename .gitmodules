@@ -1,0 +1,3 @@
+[submodule "exercise/kingchess"]
+	path = exercise/kingchess
+	url = https://github.com/LeNgocMinhIt27/javascript.git

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <p>
+            The try statement defines a code block to run (to try).
+            <br>
+            The catch statement defines a code block to handle any error.
+            <br>
+            The finally statement defines a code block to run regardless of the result.
+            <br>
+            The throw statement defines a custom error.
+        </p>
+        <h2>JavaScript try catch</h2>
+        <p>Please input a number between 5 and 10:</p>
+        <input id="demo" type="text">
+        <button type="button" onclick="myFunction()">Test Input</button>
+        <p id="p01"></p>
+        <script>
+         try {
+         adddlert("Welcome guest!");
+           }
+         catch(err) {
+         document.getElementById("demo").innerHTML = err.message;
+           }
+           function myFunction() {
+           const message = document.getElementById("p01");
+           message.innerHTML = "";
+           let x = document.getElementById("demo").value;
+           try { 
+           if(x.trim() == "")  throw "empty";
+           if(isNaN(x)) throw "not a number";
+           x = Number(x);
+           if(x < 5)  throw "too low";
+           if(x > 10)   throw "too high";
+           }
+           catch(err) {
+           message.innerHTML = "Input is " + err;
+           }
+           }
+        </script>
+    </body>
+</html>
